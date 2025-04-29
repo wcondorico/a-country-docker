@@ -6,5 +6,6 @@ services:
     ports:
       - 4200:4200
     volumes:
-      - ./a-country-front:/project
-      - /project/node_modules
+      - ./a-country-front:/docker-project
+      - /docker-project/node_modules
+    command: ["ng", "serve", "--host", "0.0.0.0", "--poll=1000"]
